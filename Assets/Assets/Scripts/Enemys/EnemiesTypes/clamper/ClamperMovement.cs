@@ -68,7 +68,7 @@ public class ClamperMovement : MonoBehaviour
 
         if (isMoving)
         {
-            timerToMove = 2f;
+            timerToMove = UnityEngine.Random.Range(1f,2f);
             timerMovement -= Time.deltaTime;
         }
 

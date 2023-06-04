@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5deaec3d60ddb3d4ca2166ea704a054b
+guid: 5b1bd094b28597c48a81097c961469ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit-Sheet_0
+      name: dummy_scaled_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44aaeb1ac20998d47949ee4677b3b567
-      internalID: 179303124
+      spriteID: 67ef44e1314e46541b7eec9fdcdcf4cf
+      internalID: -1858864363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit-Sheet_1
+      name: dummy_scaled_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 0
-        width: 64
-        height: 64
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 273c34153b082764581c37ab8ef3316b
-      internalID: -235498680
+      spriteID: efa66f5392e6c07488c42fbf28623eea
+      internalID: -396137715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit-Sheet_2
+      name: dummy_scaled_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 160
         y: 0
-        width: 64
-        height: 64
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945741fcb89adc445b51b7a62e8b302b
-      internalID: -1353890411
+      spriteID: 2ed375c34edcec64b946d7ccf32d0de9
+      internalID: -1007433658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit-Sheet_3
+      name: dummy_scaled_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 240
         y: 0
-        width: 64
-        height: 64
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345f47ce1a07a6a4fb43674ab8e80654
-      internalID: -1178532490
+      spriteID: 5eaf2d594bd71a146be9c1a39d2e92bb
+      internalID: 724475170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dummy_scaled_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbabdfa51bfcf8744a21df1e67287abf
+      internalID: -2050204945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dummy_scaled_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb91a38506e08247ab428da3f8de96d
+      internalID: -2089026264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dummy_scaled_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1d8a607d3b67b479c13980e0f84ee2
+      internalID: -1046858404
       vertices: []
       indices: 
       edges: []
@@ -198,10 +261,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit-Sheet_0: 179303124
-      Hit-Sheet_1: -235498680
-      Hit-Sheet_3: -1178532490
-      Hit-Sheet_2: -1353890411
+      dummy_scaled_2: -1007433658
+      dummy_scaled_1: -396137715
+      dummy_scaled_5: -2089026264
+      dummy_scaled_3: 724475170
+      dummy_scaled_0: -1858864363
+      dummy_scaled_6: -1046858404
+      dummy_scaled_4: -2050204945
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

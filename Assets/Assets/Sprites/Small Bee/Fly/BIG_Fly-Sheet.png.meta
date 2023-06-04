@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5deaec3d60ddb3d4ca2166ea704a054b
+guid: 00d836164c0131049b8f4c335e4f84c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit-Sheet_0
+      name: BIG_Fly-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,41 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44aaeb1ac20998d47949ee4677b3b567
-      internalID: 179303124
+      spriteID: 8513817792a9a9a46843d19528a28d0e
+      internalID: 267736925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 273c34153b082764581c37ab8ef3316b
-      internalID: -235498680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hit-Sheet_2
+      name: BIG_Fly-Sheet_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945741fcb89adc445b51b7a62e8b302b
-      internalID: -1353890411
+      spriteID: 3a5f71c5bb648aa42b14a68a0166c2c9
+      internalID: -1890502154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit-Sheet_3
+      name: BIG_Fly-Sheet_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +160,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345f47ce1a07a6a4fb43674ab8e80654
-      internalID: -1178532490
+      spriteID: a6ac5317baa23f74284b5c3993dd839c
+      internalID: 2037321074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG_Fly-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85caf011fc1547b409d9a33b163d52f8
+      internalID: -641443458
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit-Sheet_0: 179303124
-      Hit-Sheet_1: -235498680
-      Hit-Sheet_3: -1178532490
-      Hit-Sheet_2: -1353890411
+      BIG_Fly-Sheet_2: 2037321074
+      BIG_Fly-Sheet_0: 267736925
+      BIG_Fly-Sheet_3: -641443458
+      BIG_Fly-Sheet_1: -1890502154
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

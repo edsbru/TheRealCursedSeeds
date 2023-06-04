@@ -98,6 +98,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1892625688304372300, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -601011717, guid: f03eebefb3c762f49959a0114378d089,
+        type: 3}
+    - target: {fileID: 1892625688304372300, guid: 7eba5506082a44f43a0f9f117552752e,
+        type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -119,17 +125,17 @@ PrefabInstance:
     - target: {fileID: 1892625688304372301, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1892625688304372301, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1892625688304372301, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1892625688304372301, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
@@ -186,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeeGigant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1892625688304372403, guid: 7eba5506082a44f43a0f9f117552752e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 629b280fc863bfc4d987cb5623f26928, type: 2}
     - target: {fileID: 7375465509945596954, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: enemySpeed
