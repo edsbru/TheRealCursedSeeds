@@ -28,12 +28,6 @@ public class TutorialEnemyFreeze : MonoBehaviour
                 room1Enemies[i].transform.position = room1EnemiesPositions[i];
             }
             var projectiles = FindObjectsOfType<BulletStats>();
-            for (int i = 0; i < projectiles.Length; i++)
-            {
-                Destroy(projectiles[i].gameObject);
-
-            }
-
 
         }
     }

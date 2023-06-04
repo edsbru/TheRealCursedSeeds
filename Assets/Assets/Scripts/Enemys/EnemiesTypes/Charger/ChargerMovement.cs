@@ -17,7 +17,7 @@ public class ChargerMovement : MonoBehaviour
     public Vector3 dir3;
     public bool isGoingToCharge = false;
     public bool isCharging = false;
-    public float chargingForce = 50;
+    public float chargingForce = 200;
     private AudioSource au;
 
     ///CONTADORES
@@ -35,14 +35,16 @@ public class ChargerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        toCharge = Random.Range(0.5f, 1.5f);
         pl = GameObject.Find("mantee_v2");
         enemiesStats = GetComponent<EnemiesStats>();
         rb = GetComponent<Rigidbody2D>();
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
         enemyFrozen = GetComponent<EnemyFrozen>();
         au = GetComponent<AudioSource>();
-        
-       
+
+        wait = Random.Range(2f, 4.5f);
+
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class ChargerMovement : MonoBehaviour
                 rb.velocity = Vector2.zero; 
                 isCharging = false;
                 chargeTime = 1.3f;
-                toCharge = 1.5f;
+                toCharge = Random.Range(0.2f, 1.5f);
             }
         }
 
@@ -100,6 +102,7 @@ public class ChargerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        waitoffset = Random.Range(1f, 3.5f);
 
         if (!isCharging)
         {
