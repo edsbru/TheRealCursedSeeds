@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class ClamperMovement : MonoBehaviour
     PlayerHealthHandler playerHealthHandler;
     GameObject pl;
 
+    public GameObject hideOnRun; 
+
+    
+
 
     void Start()
     {
@@ -25,6 +30,11 @@ public class ClamperMovement : MonoBehaviour
     void Update()
     {
 
+        GetComponent<Animator>().SetBool("moving", isMoving);
+
+        transform.GetChild(transform.childCount-1).GetComponent<SpriteRenderer>().enabled = isMoving;
+        hideOnRun.SetActive(!isMoving);
+
         if (playerHealthHandler.isPlayerDead)
         {
             this.enabled = false;
@@ -32,7 +42,16 @@ public class ClamperMovement : MonoBehaviour
 
         if (isStopped)
         {
-            dir = new Vector3(Random.Range(-360, 360), Random.Range(-360, 360)).normalized;
+            if(Vector2.Distance(transform.position, FindObjectOfType<PlayerMovement>().transform.position) > 6f)
+            {
+                dir = (FindObjectOfType<PlayerMovement>().transform.position - transform.position).normalized;
+                dir.Normalize();
+
+            }else
+            {
+                dir = new Vector3(UnityEngine.Random.Range(-360, 360), UnityEngine.Random.Range(-360, 360)).normalized;
+
+            }
         }
 
         if (isStopped)
