@@ -10,7 +10,13 @@ public class GenerateRoom : MonoBehaviour
     public GameObject[] rooms;
 
     public const int MAX_ROOMS = 8;
-    
+
+    public Vector2 offset;
+
+    float timeToFixPosition = 1f;
+    bool fixedPosition = false;
+    GameObject generatedRoom;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +30,21 @@ public class GenerateRoom : MonoBehaviour
 
         if (canGenerate && willGenerate)
         {
-            int selectedPrefabIndex = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
-            GameObject temp = Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
-            temp.name = "Room " + DungeonManager.instance.RoomsObjecs.Count;
-            DungeonManager.instance.RoomsObjecs.Add(temp);
-            DungeonManager.instance.currentRoomsPositions.Add(transform.position);
             
-            if(DungeonManager.instance.currentRoomsPositions.Count <= GenerateRoom.MAX_ROOMS)
+            int selectedPrefabIndex = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
+            generatedRoom = Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
+            generatedRoom.name = "Room " + DungeonManager.instance.RoomsObjecs.Count;
+            DungeonManager.instance.RoomsObjecs.Add(generatedRoom);
+            DungeonManager.instance.currentRoomsPositions.Add(transform.position);
+
+            generatedRoom.transform.position = generatedRoom.transform.position + (Vector3)offset;
+
+
+            if (DungeonManager.instance.currentRoomsPositions.Count <= GenerateRoom.MAX_ROOMS)
             {
                 gameObject.SetActive(false);
             }
+
         }
         else
         { 
@@ -42,6 +53,19 @@ public class GenerateRoom : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        timeToFixPosition -= Time.deltaTime;
+        if (timeToFixPosition <= 0)
+        {
+            if (!fixedPosition)
+            {
+                fixedPosition = true;
+                generatedRoom.transform.position = generatedRoom.transform.position + (Vector3)offset;
+                Debug.Log("FIXED");
+            }
 
+        }
+    }
 
 }
