@@ -70,6 +70,10 @@ public class ClamperMovement : MonoBehaviour
         {
             isStopped = false;
             isMoving = true;
+
+            var audios = GetComponents<AudioSource>();
+            audios[0].Stop();
+            audios[1].Play();
         }
 
         if (isMoving)
@@ -83,6 +87,9 @@ public class ClamperMovement : MonoBehaviour
         {
             isStopped = true;
             isMoving = false;
+            var audios = GetComponents<AudioSource>();
+            audios[1].Stop();
+            audios[0].Play();
         }
 
     }

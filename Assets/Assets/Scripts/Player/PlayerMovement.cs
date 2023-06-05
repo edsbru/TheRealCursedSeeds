@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 KnockBackDir;
     public float knockBackForce;
     // Start is called before the first frame update
+    [SerializeField] public AudioClip steepFootAudio;
     void Start()
     {
         playerStats = GetComponent<PlayerStats>();
@@ -24,9 +25,26 @@ public class PlayerMovement : MonoBehaviour
         playerAim = GameObject.Find("RotatePoint").GetComponent<PlayerAimWeapon>();
     }
 
+    float stepSoundFrec = 0.25f;
+    float stepSoundFrecCount = 0.25f;
     // Update is called once per frame
     void Update()
     {
+
+        if (isMoving)
+        {
+            stepSoundFrecCount -= Time.deltaTime;
+            if (stepSoundFrecCount <= 0)
+            {
+                stepSoundFrecCount = stepSoundFrec;
+                SoundController.instance.PlaySound(steepFootAudio);
+            }
+        }
+        else
+        {
+            stepSoundFrecCount = 0f;
+        }
+
         if (playerStats.life <= 0)
         {
             Destroy(this);

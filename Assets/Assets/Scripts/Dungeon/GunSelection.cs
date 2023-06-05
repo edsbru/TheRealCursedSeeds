@@ -13,6 +13,7 @@ public class GunSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rotatePoint = GameObject.Find("RotatePoint");
         SelectWeapon(GameManager.instance.currentWeaponID);
     }

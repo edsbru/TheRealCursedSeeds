@@ -52,6 +52,7 @@ public class TeacherDialogue : MonoBehaviour
             {
                 StopAllCoroutines();
                 DialogueText.text = DialogueLines[lineIndex];
+                GetComponent<AudioSource>().Stop();
 
             }
 
@@ -66,13 +67,19 @@ public class TeacherDialogue : MonoBehaviour
         lineIndex = 0;
         movement.enabled = false;
         StartCoroutine(ShowLine());
+        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().time = 0.2f;
     }
+
+    float lastDialogTime;
 
     private void NextDialogueLine()
     {
         lineIndex++;
         if (lineIndex < DialogueLines.Length)
         {
+            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().time = lastDialogTime;
             StartCoroutine(ShowLine());
         }
         else
@@ -103,9 +110,13 @@ public class TeacherDialogue : MonoBehaviour
 
         foreach (char ch in DialogueLines[lineIndex])
         {
+            lastDialogTime = GetComponent<AudioSource>().time;
             DialogueText.text += ch;
             yield return new WaitForSecondsRealtime(typingTime);
         }
+
+        lastDialogTime = GetComponent<AudioSource>().time;
+        GetComponent<AudioSource>().Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

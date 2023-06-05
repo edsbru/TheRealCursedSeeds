@@ -56,12 +56,23 @@ public class ChargerMovement : MonoBehaviour
             this.enabled = false;
         }
         wait -= Time.deltaTime;
-       if(wait <= 0) {
+        var audios = GetComponents<AudioSource>();
+        if (wait <= 0) {
+            
             isGoingToCharge = true;
             toCharge -= Time.deltaTime;
+
+            if (toCharge <= 0.5f && !audios[2].isPlaying)
+            {
+                audios[0].Stop();
+                audios[1].Stop();
+                audios[2].Play();
+            }
+
             if (toCharge <= 0)
             {
                 isCharging = true;
+
             }
        }
 
@@ -70,12 +81,20 @@ public class ChargerMovement : MonoBehaviour
         {
 
             chargeTime -= Time.deltaTime;
+
+            //audios = GetComponents<AudioSource>();
+            
+
             if(chargeTime <= 0)
             {
+                audios[2].Stop();
+                audios[1].Play();
+                audios[0].Play();
                 rb.velocity = Vector2.zero; 
                 isCharging = false;
                 chargeTime = 1.3f;
                 toCharge = Random.Range(0.2f, 1.5f);
+
             }
         }
 

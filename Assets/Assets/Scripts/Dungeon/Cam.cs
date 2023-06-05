@@ -20,6 +20,7 @@ public class Cam : MonoBehaviour
 
         if(collision.tag == "Player")
         {
+            SoundController.instance.PlaySound(CrossDoorData.instance.sound);
             if (direcion == "up")
             {
                 cam.transform.position += new Vector3(0, 12.38f, 0);

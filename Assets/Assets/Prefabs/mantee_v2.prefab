@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 7194415621783756744}
   - component: {fileID: 5602994346372687871}
   - component: {fileID: 8166270801809688801}
+  - component: {fileID: 8242158271236461252}
   m_Layer: 7
   m_Name: mantee_v2
   m_TagString: Player
@@ -560,10 +561,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbPlayer: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
   directionKnockedBack: {x: 0, y: 0, z: 0}
   isShooting: 0
   KnockBackDir: {x: 0, y: 0, z: 0}
   knockBackForce: 0
+  steepFootAudio: {fileID: 8300000, guid: 934429e1aa2654b41a433473d036a7fd, type: 3}
 --- !u!114 &2927519899224286325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e38e77a8f261941aedfdbb24eb4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
   spriteRenderer: {fileID: 5095049127602115661}
   enemyAttackPaused: 0
   hitSound: {fileID: 0}
@@ -583,6 +587,12 @@ MonoBehaviour:
   isInmune: 0
   hitSplash: {fileID: 0}
   isPlayerDead: 0
+  damageSounds:
+  - {fileID: 8300000, guid: f19c40907e5fb8e43838a818cba97ccf, type: 3}
+  - {fileID: 8300000, guid: 473e49dd37caf5f4881db4843a91268a, type: 3}
+  - {fileID: 8300000, guid: a7a5e8d3c6450874d85e11568e6926d6, type: 3}
+  - {fileID: 8300000, guid: 02c93199bb1148d40a582cba0664afc8, type: 3}
+  deathGruntSound: {fileID: 8300000, guid: 50dde6685f4a860489b845f220b4bbd1, type: 3}
   deathSount: {fileID: 8300000, guid: cb7b87103a4d19647bd30facdd198cfa, type: 3}
 --- !u!114 &446731444
 MonoBehaviour:
@@ -5518,6 +5528,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8242158271236461252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095049127602115650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819f5e5902c53df4097861cb80c0ae4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 02cea1be7e879944ab63b74fe21e5a2e, type: 3}
 --- !u!1001 &619929212817059081
 PrefabInstance:
   m_ObjectHideFlags: 0

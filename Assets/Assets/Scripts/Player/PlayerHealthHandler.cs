@@ -30,6 +30,9 @@ public class PlayerHealthHandler : MonoBehaviour
     public bool isPlayerDead = false;
     private Collider2D coll;
 
+    [SerializeField] private AudioClip[] damageSounds;
+    [SerializeField] private AudioClip deathGruntSound;
+
     //UI things:
     private GameObject UI;
     private hpUI lifeUI;
@@ -178,12 +181,32 @@ public class PlayerHealthHandler : MonoBehaviour
 
     }
 
+    void HitSound()
+    {
+        if (playerStats.life >0)
+        {
+            SoundController.instance.PlaySound(damageSounds[lastGrunt++]);
+            lastGrunt = lastGrunt% damageSounds.Length;
+
+        }
+        else
+        {
+            SoundController.instance.PlaySound(deathGruntSound);
+
+        }
+
+    }
+
+    int lastGrunt = 0;
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "enemy") {
             
              if(enemyAttackPaused == false && !isInmune) {
                 playerStats.life--;
+                HitSound();
                 playerMovement.directionKnockedBack = transform.position - collision.gameObject.transform.position;
                 playerMovement.directionKnockedBack.Normalize();
                 enemyAttackPauseTimer = 1f;
@@ -229,6 +252,7 @@ public class PlayerHealthHandler : MonoBehaviour
             if (enemyAttackPaused == false && !isInmune)
             {
                 playerStats.life--;
+                HitSound();
                 enemyAttackPauseTimer = 1f;
 
                 isInmune = true;

@@ -256,6 +256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5410514287837441782, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: steepFootAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e9f14fc666a74747be165045ce93b7d, type: 3}
     - target: {fileID: 6351217129626090060, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_IsActive
