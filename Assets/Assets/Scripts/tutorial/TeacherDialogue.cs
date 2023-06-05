@@ -77,13 +77,22 @@ public class TeacherDialogue : MonoBehaviour
         }
         else
         {
+            try
+            {
+                GetComponent<SwitchUIIndicator>().enabled = false;
+
+            }catch{
+
+            }
             didDialogueStart = false;
             DialoguePanel.SetActive(false);
             exclamation.SetActive(false);
+            exclamation.GetComponent<SpriteRenderer>().enabled = false;
             movement.enabled = true;
             t.enabled = false;
             coll.enabled = false;
             finishDialogEvent.Invoke();
+            
         }
     }
 

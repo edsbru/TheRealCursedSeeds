@@ -5,6 +5,9 @@ using System;
 
 public class ShootScript : MonoBehaviour
 {
+
+    [SerializeField] private AudioClip reloadSound;
+
     //ShootLogic
     public GameObject bullet;
     public bool canFire;
@@ -33,6 +36,8 @@ public class ShootScript : MonoBehaviour
     private PlayerMovement playerMove;
     private PlayerStats playerStats;
     private float normalspeedPlayer;
+
+    bool playingReloadSound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -129,6 +134,13 @@ public class ShootScript : MonoBehaviour
        
         if (Input.GetKeyDown(KeyCode.R) || currentAmmo <= 0)
         {
+            if (!playingReloadSound)
+            {
+                playingReloadSound = true;
+                SoundController.instance.PlaySound(reloadSound);
+
+            }
+
             isReloading = true;
             if(gameObject.name == "BasicGun")
             {
@@ -156,6 +168,9 @@ public class ShootScript : MonoBehaviour
                 animator.ResetTrigger("Reloading");
                 animator.SetBool("idle", true);
             }
+        }else
+        {
+            playingReloadSound = false;
         }
        if (!Input.GetMouseButton(0))
        {

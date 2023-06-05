@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class PlayerHealthHandler : MonoBehaviour
 {
     PlayerMovement playerMovement;
-    PlayerStats playerStats;
+    public PlayerStats playerStats;
     public SpriteRenderer spriteRenderer;
     private float enemyAttackPauseTimer = 0f;
     public bool enemyAttackPaused = false;
-    float timeDeath = 4;
+    float timeDeath = 5f;
 
 
     public AudioClip hitSound;
@@ -42,6 +42,7 @@ public class PlayerHealthHandler : MonoBehaviour
     private Transform normalhpPosition;
     private Animator hpAnimator;
     private Animator noHpAnimator;
+    [SerializeField] public AudioClip deathSount;    
     
     
 
@@ -111,7 +112,7 @@ public class PlayerHealthHandler : MonoBehaviour
             guns.SetActive(false);
             coll.enabled = false;
             isPlayerDead = true;
-           
+            SoundController.instance.PlaySound(deathSount,0.17f);
 
             timeDeath -= Time.deltaTime;
             //Debug.Log(timeDeath);

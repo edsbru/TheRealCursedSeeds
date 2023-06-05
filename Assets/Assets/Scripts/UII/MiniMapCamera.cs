@@ -20,6 +20,10 @@ public class MiniMapCamera : MonoBehaviour
     void Update()
     {
 
+        if (!DungeonManager.instance)
+        {
+            return;
+        }
         foreach(Vector2 roomPos in DungeonManager.instance.currentRoomsPositions)
         {
             if (roomPos.x > DungeonManager.roomMaxPositiveDistance.x)

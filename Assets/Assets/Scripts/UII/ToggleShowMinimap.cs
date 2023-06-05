@@ -16,11 +16,14 @@ public class ToggleShowMinimap : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Tab) && minimap.active)
         {
+            
             minimap.SetActive(false);
         }
 
         else if(Input.GetKeyDown(KeyCode.Tab) && !minimap.active)
-        { 
+        {
+            
+
             minimap.SetActive(true);
         }
 

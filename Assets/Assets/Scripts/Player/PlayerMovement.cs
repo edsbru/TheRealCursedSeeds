@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerStatus status;
     PlayerHealthHandler playerHealthHandler;
     public Rigidbody2D rbPlayer;
-    private Vector3 direction;
+    public Vector3 direction;
     public Vector3 directionKnockedBack;
 
     private PlayerAimWeapon playerAim;

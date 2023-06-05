@@ -32,6 +32,10 @@ public class SoundController : MonoBehaviour
     {
         audioSource.PlayOneShot(sound);
     }
+    public void PlaySound(AudioClip sound, float volume)
+    {
+        audioSource.PlayOneShot(sound,volume);
+    }
 
     public void PlaySoundPlayer(AudioClip sound)
     {

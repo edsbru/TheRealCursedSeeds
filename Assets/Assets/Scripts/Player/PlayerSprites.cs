@@ -20,13 +20,39 @@ public class PlayerSprites : MonoBehaviour
         playerStats = GetComponent<PlayerStats>();
 
     }
-
+    Vector2 direction;
+    GameObject rotatePoint = null;
     // Update is called once per frame
     void Update()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
 
         Vector3 rotation = mousePos - transform.position;
+
+        if(rotatePoint == null)
+        {
+            rotatePoint = GameObject.Find("RotatePoint");
+        }
+
+        bool weaponActive = false;
+        for (int i = 0; i < rotatePoint.transform.childCount; i++)
+        {
+            if (rotatePoint.transform.GetChild(i).gameObject.activeSelf)
+            {
+                weaponActive = true;
+                break;
+            }
+        }
+
+        if (!weaponActive)
+        {
+            if((Vector2)GetComponent<PlayerMovement>().direction != Vector2.zero)
+            {
+                direction = GetComponent<PlayerMovement>().direction;
+            }
+            rotation = direction;
+        }
+
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         if(rotZ > 90 || rotZ < -90)
         {

@@ -35,11 +35,11 @@ public class ReloadUI : MonoBehaviour
 
         if (shotScript.isReloading) {
             visible.SetActive(true);
-            reloadIndicator.value -= Time.deltaTime * (1f/shotScript.reloadTimeOffset);           
+            reloadIndicator.value -= Time.deltaTime * (1.8f / shotScript.reloadTimeOffset);           
         }
         else
         {
-            reloadIndicator.value = 1;
+            reloadIndicator.value = 1.8f;
             visible.SetActive(false);
         }
     }

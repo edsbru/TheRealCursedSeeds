@@ -22,6 +22,10 @@ public class LookMinimap : MonoBehaviour
             isActive = true;
             minimap.SetActive(true);
             backGroundMinimap.SetActive(true);
+            if (MapOnboarding.instance)
+            {
+                Destroy(MapOnboarding.instance.gameObject);
+            }
         }
         else if(Input.GetKeyDown(KeyCode.Tab) && isActive)
         {

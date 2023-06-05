@@ -583,6 +583,7 @@ MonoBehaviour:
   isInmune: 0
   hitSplash: {fileID: 0}
   isPlayerDead: 0
+  deathSount: {fileID: 8300000, guid: cb7b87103a4d19647bd30facdd198cfa, type: 3}
 --- !u!114 &446731444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5540,6 +5541,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 5911707219816103835}
+    - target: {fileID: 2363414438679439876, guid: 1f8f567bee0635842887e9e08cf69c34,
+        type: 3}
+      propertyPath: reloadTime
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363414438679439876, guid: 1f8f567bee0635842887e9e08cf69c34,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ae86544ba02fe3542b1b99e99794b953, type: 3}
+    - target: {fileID: 2363414438679439876, guid: 1f8f567bee0635842887e9e08cf69c34,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3791393855816571348, guid: 1f8f567bee0635842887e9e08cf69c34,
         type: 3}
       propertyPath: m_RootOrder
@@ -5652,6 +5668,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2109550521097085387}
+    - target: {fileID: 7726318112036379954, guid: 9b82b85a9696ed644b6c79853ceece9f,
+        type: 3}
+      propertyPath: reloadTime
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7726318112036379954, guid: 9b82b85a9696ed644b6c79853ceece9f,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ae1ee089c11fdf40bb288abbfb74f02, type: 3}
+    - target: {fileID: 7726318112036379954, guid: 9b82b85a9696ed644b6c79853ceece9f,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 9180676987416981218, guid: 9b82b85a9696ed644b6c79853ceece9f,
         type: 3}
       propertyPath: m_RootOrder
@@ -5793,6 +5824,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5757523989730207526, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: reloadTime
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5757523989730207526, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a5e75a683ab867488c5a70ce30e43b8, type: 3}
+    - target: {fileID: 5757523989730207526, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 2.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cacdd6d10060cb04f905a86eb1b055d5, type: 3}
 --- !u!4 &7206354230899076892 stripped
@@ -5826,8 +5872,23 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
         type: 3}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c3f321691568ba489a8c450a717a5eb, type: 3}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
       propertyPath: timeBetwenFire
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9098307195744675180, guid: 20f059440d76b2c459ea8e81c593d7c6,
         type: 3}
@@ -5937,9 +5998,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
       propertyPath: currentAmmo
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 65983948075e9df4a8762c97700575ec, type: 3}
     - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: timeBetwenFire
@@ -6025,6 +6096,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 3170558647175836253}
+    - target: {fileID: 2643959210457724044, guid: 9f239220759fdd24485c8a44e896c290,
+        type: 3}
+      propertyPath: reloadTime
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643959210457724044, guid: 9f239220759fdd24485c8a44e896c290,
+        type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 36402579c83105a4393ba3a38d0f18f8, type: 3}
+    - target: {fileID: 2643959210457724044, guid: 9f239220759fdd24485c8a44e896c290,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 1.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3521830937203279708, guid: 9f239220759fdd24485c8a44e896c290,
         type: 3}
       propertyPath: m_RootOrder

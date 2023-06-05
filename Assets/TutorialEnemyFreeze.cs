@@ -29,6 +29,12 @@ public class TutorialEnemyFreeze : MonoBehaviour
             }
             var projectiles = FindObjectsOfType<BulletStats>();
 
+            for (int i = 0; i < projectiles.Length; i++)
+            {
+                if(projectiles[i].tag == "enemyB")
+                    Destroy(projectiles[i].gameObject);
+            }
+
         }
     }
 }

@@ -29,6 +29,9 @@ public class BulletNormal : MonoBehaviour
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         direcion = (mousePos - p.transform.position).normalized; // el vector desde el objeto hacia el mouse
+
+        
+
         randomBullet = Quaternion.Euler(0f, 0f, Random.Range(-dispersionAngle, dispersionAngle)) * direcion; // cambio de direcion para que el arma tenga dispersion
         Vector3 rotation = transform.position - mousePos; // la rotacion enemiesStats para que la bala siempre se vea recta enemyDeath todos los angulos respecto al mouse
 

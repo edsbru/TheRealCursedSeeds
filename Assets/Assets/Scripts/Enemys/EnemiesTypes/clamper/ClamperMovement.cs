@@ -16,9 +16,6 @@ public class ClamperMovement : MonoBehaviour
 
     public GameObject hideOnRun; 
 
-    
-
-
     void Start()
     {
         enemiesStats = GetComponent<EnemiesStats>();
@@ -33,7 +30,16 @@ public class ClamperMovement : MonoBehaviour
         GetComponent<Animator>().SetBool("moving", isMoving);
 
         transform.GetChild(transform.childCount-1).GetComponent<SpriteRenderer>().enabled = isMoving;
-        hideOnRun.SetActive(!isMoving);
+        //hideOnRun.SetActive(isMoving);
+        if(isMoving)
+        {
+            // set sprite renderer opecity to 0
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        }else
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+
+        }
 
         if (playerHealthHandler.isPlayerDead)
         {
