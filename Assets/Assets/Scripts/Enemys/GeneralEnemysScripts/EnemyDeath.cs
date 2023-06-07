@@ -66,6 +66,15 @@ public class EnemyDeath : MonoBehaviour
   
     }
 
+    bool playingSoundDamage = false;
+
+    IEnumerator BlockDamageSounds()
+    {
+        playingSoundDamage = true;
+        yield return new WaitForSeconds(0.7f);
+        playingSoundDamage = false; 
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == ("bullet"))
@@ -87,8 +96,9 @@ public class EnemyDeath : MonoBehaviour
                 hitAudioSource.transform.SetParent(null);
                 SoundController.instance.PlaySound(organicDeathSound, 0.35f);
             }
-            else
+            else if (!playingSoundDamage)
             {
+                StartCoroutine(BlockDamageSounds());
                 hitAudioSource.PlayOneShot(
                     hitSounds[Random.Range(0, hitSounds.Length)]
                 );

@@ -20,7 +20,7 @@ public class DestoryEbulelts : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyB")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
     }
 }

@@ -17,6 +17,8 @@ public class Cam : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        float distToCrossDoorsHorizontal = 2f;
+        float distToCrossDoorsVertical = 2f;
 
         if(collision.tag == "Player")
         {
@@ -24,25 +26,25 @@ public class Cam : MonoBehaviour
             if (direcion == "up")
             {
                 cam.transform.position += new Vector3(0, 12.38f, 0);
-                player.transform.position += new Vector3(0, 6.4f, 0);
+                player.transform.position += new Vector3(0, distToCrossDoorsVertical, 0);
             }
 
             else if (direcion == "down")
             {
                 cam.transform.position += new Vector3(0, -12.48f, 0);
-                player.transform.position += new Vector3(0, -6.4f, 0);
+                player.transform.position += new Vector3(0, -distToCrossDoorsVertical, 0);
             }
 
             else if(direcion == "right")
             {
                 cam.transform.position += new Vector3(22, 0, 0);
-                player.transform.position += new Vector3(3f, 0, 0);
+                player.transform.position += new Vector3(distToCrossDoorsHorizontal, 0, 0);
             }
 
             else if (direcion == "left")
             {
                 cam.transform.position += new Vector3(-22f, 0, 0);
-                player.transform.position += new Vector3(-3f, 0, 0);
+                player.transform.position += new Vector3(-distToCrossDoorsHorizontal, 0, 0);
             }
             FixTeleportedPosition();
 

@@ -23,11 +23,28 @@ public class ClamperMovement : MonoBehaviour
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
     }
 
+    bool isShooting;
+    
     // Update is called once per frame
     void Update()
     {
 
-        bool isShooting = GetComponent<ClamperShoot>().shooting;
+        bool nowIsShooting = GetComponent<ClamperShoot>().shooting;
+        
+        if(isShooting && !nowIsShooting)
+        {
+            var audios = GetComponents<AudioSource>();
+            if (isMoving)
+            {
+                audios[1].Play();
+
+            }else
+            {
+                audios[0].Play();
+
+            }
+        }
+        isShooting = nowIsShooting;
 
 
         GetComponent<Animator>().SetBool("shooting", isShooting);
@@ -48,6 +65,9 @@ public class ClamperMovement : MonoBehaviour
 
         if(isShooting)
         {
+            var audios = GetComponents<AudioSource>();
+            audios[1].Stop();
+            audios[0].Stop();
             return;
         }
 

@@ -110,6 +110,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1046858404, guid: 5b1bd094b28597c48a81097c961469ab,
         type: 3}
+    - target: {fileID: 2056414541106599102, guid: c6a2cffb2be4bb24b8ba32fe4c061616,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6267239830112194584, guid: c6a2cffb2be4bb24b8ba32fe4c061616,
         type: 3}
       propertyPath: m_Controller

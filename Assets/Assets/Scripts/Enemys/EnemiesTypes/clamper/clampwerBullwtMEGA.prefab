@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: clampwerBullwtMEGA
       objectReference: {fileID: 0}
+    - target: {fileID: 2465839978527300387, guid: d203f3acacf682a4183183fb5ded0e6c,
+        type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3033744373865141801, guid: d203f3acacf682a4183183fb5ded0e6c,
         type: 3}
       propertyPath: m_RootOrder

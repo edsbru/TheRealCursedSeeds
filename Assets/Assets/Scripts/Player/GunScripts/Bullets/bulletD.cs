@@ -24,7 +24,7 @@ public class bulletD : MonoBehaviour
         }
         if (collision.gameObject.tag == "enemyB")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
     }
 }
