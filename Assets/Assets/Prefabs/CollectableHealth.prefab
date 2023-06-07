@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b997b08b37461e46a07c7f382ae53e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthClip: {fileID: 8300000, guid: 2dd00df8bb54df743891a07b81124a33, type: 3}
 --- !u!114 &8651020204877852131
 MonoBehaviour:
   m_ObjectHideFlags: 0

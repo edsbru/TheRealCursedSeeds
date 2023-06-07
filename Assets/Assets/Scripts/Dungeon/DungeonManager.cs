@@ -15,6 +15,7 @@ public class DungeonManager : MonoBehaviour
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
     public static Vector2 roomMaxNegativeDistance = Vector2.zero;
 
+    public List<int> spawnedRoomsIndexes = new List<int>();
     public GameObject[] roomPrefabs;
     public GameObject[] nextFloorPrefab;
 
@@ -37,6 +38,19 @@ public class DungeonManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        spawnedRoomsIndexes = new List<int>() { };
+        for (int i = 0; i < roomPrefabs.Length; i++)
+        {
+            spawnedRoomsIndexes.Add(i);
+        }
+
+        for (int i = 0; i < spawnedRoomsIndexes.Count; i++)
+        {
+            int temp = spawnedRoomsIndexes[i];
+            int randomIndex = Random.Range(i, spawnedRoomsIndexes.Count);
+            spawnedRoomsIndexes[i] = spawnedRoomsIndexes[randomIndex];
+            spawnedRoomsIndexes[randomIndex] = temp;
+        }
     }
 
 

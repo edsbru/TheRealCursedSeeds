@@ -490,7 +490,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1397462407
   m_SortingLayer: 7
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1234091765, guid: dc2ce8dc6a7042e4ead7f6cc6f3de782, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e9b7ca4c418db4db1be10b0a081db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slimed: 0
   life: 3
   speed: 5
   seeds: 0
@@ -560,6 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f2c0cd7fd25ae488ade8d01a58faa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
   rbPlayer: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   directionKnockedBack: {x: 0, y: 0, z: 0}
@@ -606,8 +608,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d37afda7426402439bd3bec83c988ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popSound: {fileID: 8300000, guid: 5ef7e3c085e86894b8911eb9b7f298c3, type: 3}
   lifePrefab: {fileID: 1114519708517564838, guid: 10d0716d7736c354c844d63eeac1a20a,
     type: 3}
+  bubble: {fileID: 0}
   pickSound: {fileID: 8300000, guid: 2576590e1eb21f64da9c9ebc55552df1, type: 3}
 --- !u!114 &1874673432262967476
 MonoBehaviour:
@@ -687,8 +691,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.034308344, y: -0.059793055}
-  m_Size: {x: 0.5247442, y: 0.9496974}
+  m_Offset: {x: 0, y: -0.06}
+  m_Size: {x: 0.43, y: 0.75}
   m_Direction: 0
 --- !u!198 &5602994346372687871
 ParticleSystem:

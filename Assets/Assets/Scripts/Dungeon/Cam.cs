@@ -18,7 +18,7 @@ public class Cam : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         float distToCrossDoorsHorizontal = 2f;
-        float distToCrossDoorsVertical = 2f;
+        float distToCrossDoorsVertical = 5f;
 
         if(collision.tag == "Player")
         {

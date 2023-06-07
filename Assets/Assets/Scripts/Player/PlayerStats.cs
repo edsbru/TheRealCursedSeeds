@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public bool slimed;
     public int life = 3;
     public float speed = 5f;
     public int seeds = 0;

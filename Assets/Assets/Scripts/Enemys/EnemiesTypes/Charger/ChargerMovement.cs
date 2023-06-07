@@ -60,24 +60,18 @@ public class ChargerMovement : MonoBehaviour
     float[] volumnes;
     IEnumerator HitSoundRoutine()
     {
-        var audios = GetComponents<AudioSource>();
-        for (int i = 0; i < audios.Length; i++)
-        {
-            audios[i].volume = 0;
-        }
-        yield return new WaitForSeconds(1f);
+        //var audios = GetComponents<AudioSource>();
+        //for (int i = 0; i < audios.Length; i++)
+        //{
+        //    audios[i].enabled = false;
+        //}
+        yield return new WaitForSeconds(0.5f);
 
-        for (int i = 0; i < audios.Length; i++)
-        {
-            try
-            {
-                audios[i].volume = volumnes[i];
+        //for (int i = 0; i < audios.Length; i++)
+        //{
+        //    audios[i].enabled = true;
 
-            }catch(System.NullReferenceException e)
-            {
-
-            }
-        }
+        //}
     }
 
     // Update is called once per frame

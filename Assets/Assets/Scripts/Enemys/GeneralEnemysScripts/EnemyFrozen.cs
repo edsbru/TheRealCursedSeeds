@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyFrozen : MonoBehaviour
 {
+    public GameObject fixillo;
     public bool isFrozen = false;
     public bool setToFreeze = false;
     private SpriteRenderer sr;
@@ -50,16 +51,26 @@ public class EnemyFrozen : MonoBehaviour
         isFrozen = true;
         timeToMelt = 5.0f;
         setToFreeze = false;
-
+        
     }
 
     public void MeltCharacter()
     {
+        FindObjectOfType<TutorialOpenRoomTwo>().Bee_1 = Instantiate(fixillo, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        return;
+
         setToFreeze = false;
         ice.SetActive(false);
         enemiesStats.enemySpeed = 2;
         isFrozen = false;
         timeToMelt = 0.0f;
         GetComponent<Animator>().enabled = true;
+        var audios = GetComponents<AudioSource>();
+        for (int i = 0; i < audios.Length; i++)
+        {
+            audios[i].enabled = true;
+        }
+
     }
 }

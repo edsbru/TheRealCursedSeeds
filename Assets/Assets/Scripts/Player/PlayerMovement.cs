@@ -36,8 +36,40 @@ public class PlayerMovement : MonoBehaviour
             stepSoundFrecCount -= Time.deltaTime;
             if (stepSoundFrecCount <= 0)
             {
-                stepSoundFrecCount = stepSoundFrec;
-                SoundController.instance.PlaySound(steepFootAudio);
+                if (playerStats.slimed)
+                {
+                    SoundController.instance.PlaySound(
+                        SlimeManager.instance.footstep    
+                    );
+                    stepSoundFrecCount = stepSoundFrec*2f;
+
+                    Instantiate(
+                        SlimeManager.instance.fsPrefab,
+                        (Vector2)transform.position + Vector2.down * 0.5f
+                        + new Vector2(
+                                0.2f,
+                                Random.Range(-0.2f, 0.2f)
+                            ),
+                        Quaternion.identity
+                    );
+                    Instantiate(
+                            SlimeManager.instance.fsPrefab,
+                            (Vector2)transform.position + Vector2.down * 0.5f
+                            + new Vector2(
+                                    -0.2f,
+                                    Random.Range(-0.2f, 0.2f)
+                                ),
+                            Quaternion.identity
+                        );
+
+
+                }
+                else
+                {
+                    stepSoundFrecCount = stepSoundFrec;
+                    SoundController.instance.PlaySound(steepFootAudio);
+
+                }
             }
         }
         else
@@ -85,7 +117,16 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-       transform.position += direction * playerStats.speed * Time.fixedDeltaTime;
+
+        if (playerStats.slimed)
+        {
+            transform.position += direction * playerStats.speed * Time.fixedDeltaTime*0.4f;
+
+        }
+        else
+        {
+            transform.position += direction * playerStats.speed * Time.fixedDeltaTime;
+        }
 
         if(direction.magnitude != 0)
         {

@@ -19,6 +19,8 @@ TagManager:
   - Corridor
   - Dungeon
   - Grass
+  - bulletP
+  - slime
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ public class LootBag : MonoBehaviour
     Wseed GetDroppedSeed()
     {
 
-        if(Random.Range(0,101) < 30)
+        if(Random.Range(0,101) < 10)
         {
             // Spawn life;
             Instantiate(CollectSeeds.instace.lifePrefab, transform.position, Quaternion.identity);
@@ -51,6 +51,15 @@ public class LootBag : MonoBehaviour
             float dropForce = 2f;
             Vector2 dropDirection = new Vector2(Random.Range(-1f,1f), Random.Range(-1f,1f));
             WseedGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
+            GameObject bubble = Instantiate(CollectSeeds.instace.bubble, spawnPosition, Quaternion.identity);
+            bubble.transform.SetParent(WseedGameObject.transform);
+            var c = WseedGameObject.AddComponent<PropagateBubbleExplosion>();
+            c.bubble = bubble.GetComponent<BubbgleScript>();
+            var a = WseedGameObject.AddComponent<AnimacionInteraccion>();
+            a.offset = 0.1f;
+
+            WseedGameObject.GetComponent<CircleCollider2D>().radius *= 3.5f;
+
         }
     }
 }

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CollectSeeds : MonoBehaviour
 {
+    [SerializeField]
+    public AudioClip popSound;
     public GameObject lifePrefab;
+    public GameObject bubble;
     [SerializeField] private AudioClip pickSound;
     //public AudioSource picking;
 

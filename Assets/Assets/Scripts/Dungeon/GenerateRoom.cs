@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,17 @@ public class GenerateRoom : MonoBehaviour
     float timeToFixPosition = 1f;
     bool fixedPosition = false;
     GameObject generatedRoom;
-   
+
+    bool ListContains(List<int> list, int item)
+    {
+        foreach (var item1 in list)
+        {
+            if (item1 == item) return true;
+        }
+
+        return false;
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +43,13 @@ public class GenerateRoom : MonoBehaviour
         {
             
             int selectedPrefabIndex = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
+
+            if(DungeonManager.instance.spawnedRoomsIndexes.Count != 0)
+            {
+                selectedPrefabIndex = DungeonManager.instance.spawnedRoomsIndexes[0];
+                DungeonManager.instance.spawnedRoomsIndexes.RemoveAt(0);
+            }
+
             generatedRoom = Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
             generatedRoom.name = "Room " + DungeonManager.instance.RoomsObjecs.Count;
             DungeonManager.instance.RoomsObjecs.Add(generatedRoom);

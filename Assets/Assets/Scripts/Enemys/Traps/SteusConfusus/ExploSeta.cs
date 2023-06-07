@@ -18,6 +18,7 @@ public class ExploSeta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(gameObject);
         player = GameObject.Find("mantee_v2");
         cl = GetComponent<Collider2D>();
         playerStatus = player.GetComponent<PlayerStatus>();
