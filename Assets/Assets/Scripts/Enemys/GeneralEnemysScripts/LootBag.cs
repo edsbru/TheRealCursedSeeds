@@ -7,9 +7,19 @@ public class LootBag : MonoBehaviour
     public GameObject dropedSeedPrefab;
     public List<Wseed> WseedsList = new List<Wseed>();
 
+
+
     // Start is called before the first frame update
     Wseed GetDroppedSeed()
     {
+
+        if(Random.Range(0,101) < 30)
+        {
+            // Spawn life;
+            Instantiate(CollectSeeds.instace.lifePrefab, transform.position, Quaternion.identity);
+            return null;
+        }
+
        int randmomNumber = Random.Range(1, 101);
        List<Wseed> possibleSeeds = new List<Wseed>();
 

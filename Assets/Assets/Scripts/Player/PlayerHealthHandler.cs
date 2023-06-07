@@ -177,6 +177,15 @@ public class PlayerHealthHandler : MonoBehaviour
 
     }
 
+
+    public void UpdateLifeUI()
+    {
+        for (int i = 0; i < playerStats.life; i++)
+        {
+            lifeUI.lifesIcons[i].SetActive(true);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "enemy") {

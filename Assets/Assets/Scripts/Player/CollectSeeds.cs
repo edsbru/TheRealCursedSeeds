@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CollectSeeds : MonoBehaviour
 {
-
+    public GameObject lifePrefab;
     [SerializeField] private AudioClip pickSound;
     //public AudioSource picking;
+
+    public static CollectSeeds instace;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        instace = this;
     }
 
     // Update is called once per frame
