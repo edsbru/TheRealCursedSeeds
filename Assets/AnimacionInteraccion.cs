@@ -7,7 +7,7 @@ public class AnimacionInteraccion : MonoBehaviour
 {
     float duration = 1.75f;
     float timeCount = 0f;
-    float offset = 0.18f;
+    public float offset = 0.18f;
     Vector2 origin;
     AnimationCurve curve;
     // Start is called before the first frame update

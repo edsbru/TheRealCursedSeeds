@@ -606,6 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d37afda7426402439bd3bec83c988ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePrefab: {fileID: 1114519708517564838, guid: 10d0716d7736c354c844d63eeac1a20a,
+    type: 3}
   pickSound: {fileID: 8300000, guid: 2576590e1eb21f64da9c9ebc55552df1, type: 3}
 --- !u!114 &1874673432262967476
 MonoBehaviour:
