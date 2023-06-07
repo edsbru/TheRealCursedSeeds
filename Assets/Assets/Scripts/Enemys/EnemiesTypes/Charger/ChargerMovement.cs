@@ -44,7 +44,40 @@ public class ChargerMovement : MonoBehaviour
         au = GetComponent<AudioSource>();
 
         wait = Random.Range(2f, 4.5f);
+        var audios = GetComponents<AudioSource>();
+        float[] volumnes = new float[audios.Length];
+        for (int i = 0; i < audios.Length; i++)
+        {
+            volumnes[i] = audios[i].volume;
+        }
 
+        GetComponent<EnemyDeath>().onHit.AddListener(() => {
+            StartCoroutine(HitSoundRoutine());
+        });
+
+    }
+
+    float[] volumnes;
+    IEnumerator HitSoundRoutine()
+    {
+        var audios = GetComponents<AudioSource>();
+        for (int i = 0; i < audios.Length; i++)
+        {
+            audios[i].volume = 0;
+        }
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < audios.Length; i++)
+        {
+            try
+            {
+                audios[i].volume = volumnes[i];
+
+            }catch(System.NullReferenceException e)
+            {
+
+            }
+        }
     }
 
     // Update is called once per frame

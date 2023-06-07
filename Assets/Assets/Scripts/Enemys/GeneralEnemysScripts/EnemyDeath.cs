@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class EnemyDeath : MonoBehaviour
 {
+
     EnemiesStats enemiesStats;
     Collider2D cl;
     float timerHit = 0f;
@@ -14,7 +16,19 @@ public class EnemyDeath : MonoBehaviour
     EnemyFrozen enemyFrozen;
     private ParticleSystem blood;
     public GameObject deathSplash;
-    
+    public AudioSource hitAudioSource;
+    [SerializeField]
+    public AudioClip[] hitSounds;
+    [SerializeField]
+    public AudioClip deathGruntSound;
+
+    [SerializeField]
+    public AudioClip[] organicHitSounds;
+    [SerializeField]
+    public AudioClip organicDeathSound;
+
+    public UnityEvent onHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +81,25 @@ public class EnemyDeath : MonoBehaviour
             blood.Play();
 
             enemiesStats.enemyHealth -= bs.damage;
+            if(enemiesStats.enemyHealth <= 0 )
+            {
+                hitAudioSource.PlayOneShot(deathGruntSound);
+                hitAudioSource.transform.SetParent(null);
+                SoundController.instance.PlaySound(organicDeathSound, 0.35f);
+            }
+            else
+            {
+                hitAudioSource.PlayOneShot(
+                    hitSounds[Random.Range(0, hitSounds.Length)]
+                );
+                SoundController.instance.PlaySound(
+                    organicHitSounds[Random.Range(0, organicHitSounds.Length)], 0.7f
+                );
+                onHit.Invoke();
+
+            }
         }
     }
+
+
 }
