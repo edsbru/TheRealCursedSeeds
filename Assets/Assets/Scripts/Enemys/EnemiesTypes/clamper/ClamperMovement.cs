@@ -27,11 +27,16 @@ public class ClamperMovement : MonoBehaviour
     void Update()
     {
 
+        bool isShooting = GetComponent<ClamperShoot>().shooting;
+
+
+        GetComponent<Animator>().SetBool("shooting", isShooting);
+
         GetComponent<Animator>().SetBool("moving", isMoving);
 
-        transform.GetChild(transform.childCount-1).GetComponent<SpriteRenderer>().enabled = isMoving;
+        transform.GetChild(transform.childCount-1).GetComponent<SpriteRenderer>().enabled = !(isMoving || isShooting);
         //hideOnRun.SetActive(isMoving);
-        if(isMoving)
+        if(isMoving || isShooting)
         {
             // set sprite renderer opecity to 0
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
@@ -39,6 +44,11 @@ public class ClamperMovement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
+        }
+
+        if(isShooting)
+        {
+            return;
         }
 
         if (playerHealthHandler.isPlayerDead)

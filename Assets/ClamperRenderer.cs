@@ -6,11 +6,14 @@ public class ClamperRenderer : MonoBehaviour
 {
     private GameObject player;
     public SpriteRenderer sr;
+    SpriteRenderer osr;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("mantee_v2");
+        osr = transform.GetChild(transform.childCount - 1).GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -24,5 +27,6 @@ public class ClamperRenderer : MonoBehaviour
         {
             sr.flipX = false;
         }
+        osr.flipX = sr.flipX;
     }
 }

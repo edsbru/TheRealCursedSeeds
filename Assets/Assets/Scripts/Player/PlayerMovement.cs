@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
-    PlayerStats playerStats;
+    public PlayerStats playerStats;
     PlayerStatus status;
     PlayerHealthHandler playerHealthHandler;
     public Rigidbody2D rbPlayer;

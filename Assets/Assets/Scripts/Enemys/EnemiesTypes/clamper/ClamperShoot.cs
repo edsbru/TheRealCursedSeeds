@@ -14,6 +14,7 @@ public class ClamperShoot : MonoBehaviour
     GameObject pl;
     public float timeBetrewShot = 5f;
     public float timeBetrewShotOffset;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,11 @@ public class ClamperShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (shooting || GetComponent<ClamperMovement>().isMoving)
+        {
+            return;
+        }
+
         if (playerHealthHandler.isPlayerDead)
         {
             this.enabled = false;
@@ -62,8 +68,29 @@ public class ClamperShoot : MonoBehaviour
 
         if (canFire)
         {
-            Instantiate(bullet,shootSpawn.transform.position,Quaternion.identity);
+            StartCoroutine(Shoot());
             canFire = false;
         }
     }
+
+    [HideInInspector]
+    public bool shooting;
+
+    [SerializeField]
+    public AudioClip[] shootSounds;
+
+    IEnumerator Shoot()
+    {
+        GetComponent<EnemyDeath>().hitAudioSource.PlayOneShot(
+            shootSounds[Random.Range(0, shootSounds.Length)]
+        );
+        shooting = true;
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(bullet, shootSpawn.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        shooting = false;
+
+
+    }
+
 }
