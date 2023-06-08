@@ -6,7 +6,7 @@ using UnityEngine;
 public class DamageFalloff : MonoBehaviour
 {
     float minDist = 0.5f;
-    float maxDist = 2f;
+    float maxDist = 4f;
     Vector2 initialPos;
     float initialDamage;
     float minDamage;

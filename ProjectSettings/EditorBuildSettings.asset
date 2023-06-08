@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Scenes/GameScenes/GameplayDefinitivoTest.unity
     guid: 02fd461632a973d4182fad0f554e9866
+  - enabled: 1
+    path: Assets/Assets/Scenes/GameScenes/TUTO_TUTO.unity
+    guid: 195fabc6ce5e5b54ab53761d773d2d77
   m_configObjects: {}

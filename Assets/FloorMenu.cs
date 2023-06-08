@@ -41,25 +41,6 @@ public class FloorMenu : MonoBehaviour
             buttons[1].SetActive(false);
         }
 
-        if (GameManager.instance.floor1Passed && GameManager.instance.floor2Passed && GameManager.instance.floor3Passed)
-        {
-            buttons[2].SetActive(true);
-        }
-        else
-        {
-            //renderizar un sprite con el boton con un candado
-            buttons[2].SetActive(false);
-        }
-
-        if (GameManager.instance.floor1Passed && GameManager.instance.floor2Passed && GameManager.instance.floor3Passed && GameManager.instance.bossPassed)
-        {
-            buttons[3].SetActive(true);
-        }
-        else
-        {
-            //renderizar un sprite con el boton con un candado
-            buttons[3].SetActive(false);
-        }
 
     }
 
