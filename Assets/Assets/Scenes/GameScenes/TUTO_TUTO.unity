@@ -6903,6 +6903,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1887396868555821741, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1395.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8910121874367880323, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -13403,6 +13408,7 @@ GameObject:
   - component: {fileID: 1149341966}
   - component: {fileID: 1149341965}
   - component: {fileID: 1149341968}
+  - component: {fileID: 1149341969}
   m_Layer: 0
   m_Name: OnBoardingShot
   m_TagString: Untagged
@@ -13515,6 +13521,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0.18
+--- !u!114 &1149341969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149341963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11a31a68a7b4da41987084ea20bc33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1160514924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17654,7 +17672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -17674,8 +17692,8 @@ Canvas:
   m_GameObject: {fileID: 1794276998}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 849160284}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -17683,7 +17701,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -742114219
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1794277002
@@ -20715,8 +20733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -100}
+  m_AnchoredPosition: {x: 24.500061, y: 0}
+  m_SizeDelta: {x: -248.99988, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090457203
 MonoBehaviour:

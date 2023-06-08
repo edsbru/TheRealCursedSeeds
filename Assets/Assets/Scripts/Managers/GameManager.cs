@@ -7,6 +7,11 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static bool semillasMenuOpened;
+    public static bool tutorialDone;
+    public static bool pendingToPillarArmaNueva;
+
     public static GameManager instance { get; private set; }
     public enum Wseeds { ICEHEART,RABBIT, LAST};
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

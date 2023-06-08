@@ -7,7 +7,7 @@ public class CofreArmas : MonoBehaviour
 
     public GameObject menu;
 
-    bool playerIn;
+    public bool playerIn;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class CofreArmas : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)) {
             if(playerIn)
             {
+                GameManager.pendingToPillarArmaNueva = false;
                 menu.SetActive(true);
             }
         }

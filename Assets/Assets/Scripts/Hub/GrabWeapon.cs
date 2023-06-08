@@ -52,11 +52,15 @@ public class GrabWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canPick = true;
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.pendingToPillarArmaNueva = true;
+            Destroy(gameObject);
+
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        canPick = false;
     }
 }

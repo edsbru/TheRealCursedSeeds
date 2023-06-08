@@ -9,7 +9,16 @@ public class MainMenu : MonoBehaviour
 
     public void LoadSceneOnPlayButtonClick()
     {
-        SceneManager.LoadScene("TUTO_TUTO");
+        if (GameManager.tutorialDone)
+        {
+            SceneManager.LoadScene("HUB_HUB");
+            
+        }else
+        {
+            SceneManager.LoadScene("TUTO_TUTO");
+
+        }
+
     }
 
     public void OpenSettingsMenu()

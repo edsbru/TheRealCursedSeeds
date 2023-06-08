@@ -21,23 +21,27 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.name == "pauseMenu" && currentScene == 1 || currentScene == 2)
+        if (GameManager.semillasMenuOpened)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !isActive)
-            {
-                Time.timeScale = 0.0f;
-                pauseMenu.SetActive(true);
-                isActive = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape) && isActive)
-            {
-                Time.timeScale = 1.0f;
-                pauseMenu.SetActive(false);
-                isActive = false;
-            }
+            return;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !isActive)
+        {
+            Time.timeScale = 0.0f;
+            pauseMenu.SetActive(true);
+            isActive = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isActive)
+        {
+            Time.timeScale = 1.0f;
+            pauseMenu.SetActive(false);
+            isActive = false;
         }
 
     }
+
+    
     public void ReturnToGame()
     {
         Time.timeScale = 1.0f;
@@ -51,8 +55,16 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneName);
     }
     */
+    public void GoToHub()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("HUB_HUB");
+
+    }
+
     public void BackToMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
 
