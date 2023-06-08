@@ -7,15 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject settingsMenu;
 
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-        
-    }
-
     public void LoadSceneOnPlayButtonClick()
     {
         SceneManager.LoadScene("1");
@@ -25,6 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         settingsMenu.SetActive(true);
     }
+
     public void CloseGameOnExitButtonClick()
     {
         Application.Quit();
