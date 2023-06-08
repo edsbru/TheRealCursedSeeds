@@ -22,6 +22,18 @@ public class ClamperShoot : MonoBehaviour
         enemyFrozen = GetComponent<EnemyFrozen>();
         pl = GameObject.Find("mantee_v2");
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
+        if (GameManager.instance.currentFloor >= 2)
+        {
+            timeBetrewShot *= 0.4f;
+        }
+
+        if (GameManager.instance.currentFloor >= 1)
+        {
+            GetComponent<EnemiesStats>().enemyHealth *= 2f;
+        }
+
+
+
     }
 
     // Update is called once per frame
@@ -59,7 +71,9 @@ public class ClamperShoot : MonoBehaviour
         {
             canFire = true;
             if(gameObject.name != "clamperTurret Variant")
-            timerToMove = 1.5f;
+            {
+                timerToMove = 1.5f;
+            }
             else
             {
                 timerToMove = 0.4f;

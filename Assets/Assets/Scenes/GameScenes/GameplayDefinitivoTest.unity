@@ -886,11 +886,11 @@ MonoBehaviour:
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
-  currentWeaponID: 1
+  currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
-  currentFloor: 0
+  currentFloor: 2
   floor1Passed: 0
   floor2Passed: 0
   floor3Passed: 0
@@ -1152,6 +1152,7 @@ MonoBehaviour:
   currentRoomsPositions: []
   RoomsObjecs: []
   bossRoomBugs: []
+  spawnedRoomsIndexes: 
   roomPrefabs:
   - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}

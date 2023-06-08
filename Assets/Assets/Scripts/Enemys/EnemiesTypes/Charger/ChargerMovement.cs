@@ -35,6 +35,19 @@ public class ChargerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        if (GameManager.instance.currentFloor >= 1)
+        {
+            GetComponent<EnemiesStats>().enemyHealth *= 1.5f;
+        }
+
+        if (GameManager.instance.currentFloor >= 2)
+        {
+            chargingForce *= 2;
+            chargeTime *= 0.7f;
+
+        }
+
         toCharge = Random.Range(0.5f, 1.5f);
         pl = GameObject.Find("mantee_v2");
         enemiesStats = GetComponent<EnemiesStats>();
@@ -54,6 +67,8 @@ public class ChargerMovement : MonoBehaviour
         GetComponent<EnemyDeath>().onHit.AddListener(() => {
             StartCoroutine(HitSoundRoutine());
         });
+
+
 
     }
 
@@ -121,6 +136,13 @@ public class ChargerMovement : MonoBehaviour
                 isCharging = false;
                 chargeTime = 1.3f;
                 toCharge = Random.Range(0.2f, 1.5f);
+                if(GameManager.instance.currentFloor >= 2)
+                {
+                    chargeTime *= 0.7f;
+                    toCharge = Random.Range(0.3f, 1.4f);
+
+                }
+
 
             }
         }
@@ -148,7 +170,17 @@ public class ChargerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        waitoffset = Random.Range(1f, 3.5f);
+        if(GameManager.instance.currentFloor >= 2)
+        {
+            waitoffset = Random.Range(0.6f, 2.5f);
+
+        }
+        else
+        {
+            waitoffset = Random.Range(1f, 3.5f);
+        }
+
+        
 
         if (!isCharging)
         {

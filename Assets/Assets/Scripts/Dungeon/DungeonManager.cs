@@ -59,20 +59,20 @@ public class DungeonManager : MonoBehaviour
     {
         currentRoomsPositions.Add(Vector2.zero);
 
-        if (GameManager.instance.currentFloor == 1)
-            roomPrefabs = floors1Prefabs.ToArray();
+        //if (GameManager.instance.currentFloor == 1)
+        //    roomPrefabs = floors1Prefabs.ToArray();
 
-        if (GameManager.instance.currentFloor == 2)
-            roomPrefabs = floors2Prefabs.ToArray();
+        //if (GameManager.instance.currentFloor == 2)
+        //    roomPrefabs = floors2Prefabs.ToArray();
 
-        if (GameManager.instance.currentFloor == 3)
-            roomPrefabs = floors3Prefabs.ToArray();
+        //if (GameManager.instance.currentFloor == 3)
+        //    roomPrefabs = floors3Prefabs.ToArray();
 
-        if (GameManager.instance.currentFloor == 4)
-            roomPrefabs = floors4Prefabs.ToArray();
+        //if (GameManager.instance.currentFloor == 4)
+        //    roomPrefabs = floors4Prefabs.ToArray();
 
-        if(GameManager.instance.currentFloor == 5)
-            roomPrefabs = FinalBossPrefabs.ToArray();
+        //if(GameManager.instance.currentFloor == 5)
+        //    roomPrefabs = FinalBossPrefabs.ToArray();
     }
 
     // Update is called once per frame

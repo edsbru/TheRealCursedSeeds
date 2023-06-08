@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaeeb8645409ac48851cb4033235f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixillo: {fileID: 0}
   isFrozen: 0
   setToFreeze: 0
   isHit: 0
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 7db6d48da37053044ad381db1bd3ca7a, type: 2}
+  secondSR: {fileID: 318257208123824850}
 --- !u!114 &2056414541106599089
 MonoBehaviour:
   m_ObjectHideFlags: 0

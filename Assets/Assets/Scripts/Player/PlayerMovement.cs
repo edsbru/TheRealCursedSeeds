@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] public AudioClip beepSound;
+    [SerializeField] public AudioClip beepSoundEnd;
     public PlayerStats playerStats;
     PlayerStatus status;
     PlayerHealthHandler playerHealthHandler;
@@ -16,8 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public float knockBackForce;
     // Start is called before the first frame update
     [SerializeField] public AudioClip steepFootAudio;
+    public static PlayerMovement instance;
+    AudioSource slimefootstepas;
     void Start()
     {
+        instance = this;
+        slimefootstepas = GameObject.Find("slimefootstepAS").GetComponent<AudioSource>();
         playerStats = GetComponent<PlayerStats>();
         status = GetComponent<PlayerStatus>();
         rbPlayer = GetComponent<Rigidbody2D>();
@@ -38,9 +44,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (playerStats.slimed)
                 {
-                    SoundController.instance.PlaySound(
-                        SlimeManager.instance.footstep    
-                    );
+                    //SoundController.instance.PlaySound(
+                    //    SlimeManager.instance.footstep    
+                    //);
+                    slimefootstepas.PlayOneShot(SlimeManager.instance.footstep);
+
                     stepSoundFrecCount = stepSoundFrec*2f;
 
                     Instantiate(
@@ -66,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    slimefootstepas.Stop();
                     stepSoundFrecCount = stepSoundFrec;
                     SoundController.instance.PlaySound(steepFootAudio);
 
@@ -120,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerStats.slimed)
         {
-            transform.position += direction * playerStats.speed * Time.fixedDeltaTime*0.4f;
+            transform.position += direction * playerStats.speed * Time.fixedDeltaTime*0.5f;
 
         }
         else

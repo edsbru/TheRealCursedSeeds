@@ -18,6 +18,11 @@ public class bulletD : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.GetComponent<BouncyBall>())
+        {
+            return;
+        }
+
         if (collision.gameObject.tag == "bullet")
         {
             Destroy(collision.gameObject);

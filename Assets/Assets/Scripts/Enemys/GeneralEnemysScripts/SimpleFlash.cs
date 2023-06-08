@@ -5,14 +5,20 @@ using UnityEngine;
 public class SimpleFlash : MonoBehaviour
 {
     [SerializeField] private Material flashMaterial;
+    public SpriteRenderer secondSR;
 
     private SpriteRenderer sp;
     private Material originaMaterial;
+    private Material originaMaterials;
     // Start is called before the first frame update
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
         originaMaterial = sp.material;
+        if (secondSR)
+        {
+            originaMaterials = secondSR.material;
+        }
     }
 
     // Update is called once per frame
@@ -25,9 +31,18 @@ public class SimpleFlash : MonoBehaviour
          IEnumerator FlashRoutine()
         {
                 sp.material = flashMaterial;
+                
+                if (secondSR)
+                {
+                    secondSR.material = flashMaterial;
+                }
                 yield return new WaitForSeconds(duration);
                 sp.material = originaMaterial;
-            
+                if (secondSR)
+                {
+                    secondSR.material = originaMaterials;
+                }
+
         }
         StartCoroutine(FlashRoutine());
     }

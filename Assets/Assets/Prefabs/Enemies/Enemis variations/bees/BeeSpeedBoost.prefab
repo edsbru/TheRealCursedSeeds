@@ -25,17 +25,17 @@ PrefabInstance:
     - target: {fileID: 2399325757449097432, guid: 59226dd54a6026d469338e914588d40f,
         type: 3}
       propertyPath: enemyspeedofset
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 3277917971948363444, guid: 59226dd54a6026d469338e914588d40f,
         type: 3}
       propertyPath: enemySpeed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3277917971948363444, guid: 59226dd54a6026d469338e914588d40f,
         type: 3}
       propertyPath: enemyHealth
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5864987177674557468, guid: 59226dd54a6026d469338e914588d40f,
         type: 3}

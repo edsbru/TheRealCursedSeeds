@@ -102,11 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0948e7045d963f240b94d1f403e57dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadSound: {fileID: 0}
   bullet: {fileID: 2028117758635690393, guid: a13b73a5f79129543a1e0bf2733e3e0b, type: 3}
   canFire: 0
   timeBetwenFire: 0.2
-  currentAmmo: 10
-  maxAmmo: 10
+  currentAmmo: 4
+  maxAmmo: 4
+  reloadTime: 0
   reloadTimeOffset: 2
   isReloading: 0
   sound: {fileID: 0}

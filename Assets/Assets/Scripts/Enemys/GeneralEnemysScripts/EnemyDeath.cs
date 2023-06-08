@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -75,6 +76,8 @@ public class EnemyDeath : MonoBehaviour
         playingSoundDamage = false; 
     }
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == ("bullet"))
@@ -87,10 +90,30 @@ public class EnemyDeath : MonoBehaviour
 
             isHit = true;
 
-            blood.Play();
+            if(blood)
+                blood.Play();
 
-            enemiesStats.enemyHealth -= bs.damage;
-            if(enemiesStats.enemyHealth <= 0 )
+            float damageMultiplier = 1f;
+            if(SniterTargeting.instance && SniterTargeting.instance.gameObject.activeSelf && SniterTargeting.instance)
+            {
+                if (SniterTargeting.instance.targeting)
+                {
+                    if(SniterTargeting.instance.closest = GetComponent<EnemiesStats>())
+                    {
+                        if (SniterTargeting.instance.targetFixed)
+                        {
+                            damageMultiplier = 10f;
+
+                        }
+                        else
+                        {
+                            damageMultiplier = 2f;
+                        }
+                    }
+                }
+            }
+            enemiesStats.enemyHealth -= bs.damage * damageMultiplier;
+            if (enemiesStats.enemyHealth <= 0 )
             {
                 hitAudioSource.PlayOneShot(deathGruntSound);
                 hitAudioSource.transform.SetParent(null);

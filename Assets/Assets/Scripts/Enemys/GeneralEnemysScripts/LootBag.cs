@@ -16,7 +16,8 @@ public class LootBag : MonoBehaviour
         if(Random.Range(0,101) < 10)
         {
             // Spawn life;
-            Instantiate(CollectSeeds.instace.lifePrefab, transform.position, Quaternion.identity);
+            var obj = Instantiate(CollectSeeds.instace.lifePrefab, transform.position, Quaternion.identity);
+            obj.AddComponent<DeleteDropeableByTyme>();
             return null;
         }
 
@@ -59,6 +60,8 @@ public class LootBag : MonoBehaviour
             a.offset = 0.1f;
 
             WseedGameObject.GetComponent<CircleCollider2D>().radius *= 3.5f;
+            WseedGameObject.AddComponent<DeleteDropeableByTyme>();
+            bubble.AddComponent<DeleteDropeableByTyme>();
 
         }
     }

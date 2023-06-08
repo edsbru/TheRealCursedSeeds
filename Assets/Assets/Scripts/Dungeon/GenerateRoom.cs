@@ -80,7 +80,6 @@ public class GenerateRoom : MonoBehaviour
             {
                 fixedPosition = true;
                 generatedRoom.transform.position = generatedRoom.transform.position + (Vector3)offset;
-                Debug.Log("FIXED");
             }
 
         }

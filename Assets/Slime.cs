@@ -7,6 +7,13 @@ public class Slime : MonoBehaviour
     public int id;
     public int[] incompatibles;
 
+    private void Start()
+    {
+        if (GameManager.instance.currentFloor == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
