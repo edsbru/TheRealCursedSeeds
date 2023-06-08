@@ -75,7 +75,7 @@ public class SniterTargeting : MonoBehaviour
         UpdateClosest();
 
 
-        if(distanceToClosest < 1.7f)
+        if(distanceToClosest < 1.5f)
         {
             if (!targeting)
             {
@@ -89,7 +89,7 @@ public class SniterTargeting : MonoBehaviour
                 if(!targetFixed)
                 {
                     targetingTimeCount += Time.deltaTime;
-                    if(targetingTimeCount > 1.6f)
+                    if(targetingTimeCount > 2f)
                     {
                         StartFixedTargeting(closest);
                         targetFixed = true;

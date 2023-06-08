@@ -302,11 +302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0948e7045d963f240b94d1f403e57dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8993573725950607081, guid: b85de4c97071f874ca8087918f41b25c, type: 3}
+  reloadSound: {fileID: 0}
+  bullet: {fileID: 1759214778077902855, guid: 1a19cd9d955fb554f8dcf1a3f8d8e774, type: 3}
   canFire: 0
   timeBetwenFire: 0.115
   currentAmmo: 30
   maxAmmo: 30
+  reloadTime: 0
   reloadTimeOffset: 1.5
   isReloading: 0
   sound: {fileID: 8300000, guid: 6ec679fdc71c33247a23b179d9d8e6d9, type: 3}

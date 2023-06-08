@@ -112,6 +112,7 @@ public class EnemyDeath : MonoBehaviour
                     }
                 }
             }
+            Debug.Log(damageMultiplier);
             enemiesStats.enemyHealth -= bs.damage * damageMultiplier;
             if (enemiesStats.enemyHealth <= 0 )
             {
