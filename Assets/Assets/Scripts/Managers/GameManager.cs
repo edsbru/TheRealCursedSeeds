@@ -7,7 +7,7 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-
+    public static bool meanuArmasAbierto;
     public static bool semillasMenuOpened;
     public static bool tutorialDone;
     public static bool pendingToPillarArmaNueva;
@@ -63,7 +63,25 @@ public class GameManager : MonoBehaviour
 
     }
 
-   
+    public static void PararTiempo()
+    {
+        if(FindObjectOfType<PlayerMovement>())
+            FindObjectOfType<PlayerMovement>().enabled = false;
+        if(FindObjectOfType<ShootScript>())
+            FindObjectOfType<ShootScript>().enabled = false;
+    }
+
+    public static void ReanudarTiempo()
+    {
+        if (FindObjectOfType<PlayerMovement>())
+            FindObjectOfType<PlayerMovement>().enabled = true;
+        
+        if (FindObjectOfType<ShootScript>())
+            FindObjectOfType<ShootScript>().enabled = true;
+    }
+
+
+
     void Update()
     {
         if(money >= 999999999)

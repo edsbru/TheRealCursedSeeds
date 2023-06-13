@@ -22,13 +22,28 @@ public class PickWeapon : MonoBehaviour
     float timeToShow = 2f;
     bool shown = false;
 
+    public GameObject pressEIndicator;
+
+
+    bool interactionButtonPressed = false;
+
     // Update is called once per frame
     void Update()
     {
+
+        if (!interactionButtonPressed)
+        {
+            interactionButtonPressed = Input.GetButtonDown("interaction");
+        }
+
+        pressEIndicator.SetActive(isPlayerInRange && !interactionButtonPressed);
+        exclamation.SetActive(!isPlayerInRange && !interactionButtonPressed);
+
         if (isPlayerInRange && Input.GetButtonDown("interaction"))
         {
             Destroy(weapon);
             //preWeapon.SetActive(true);
+            GameManager.PararTiempo();
             TutorialGetGunScript.instance.stop = true;
             GameObject.Find("UI").transform.GetChild(0).gameObject.SetActive(true);
             showingThings = true;
@@ -42,6 +57,8 @@ public class PickWeapon : MonoBehaviour
                 ShotOnboarding.instance.GetComponent<SpriteRenderer>().enabled = true;
                 enemy.MeltCharacter();
                 Destroy(GameObject.Find("Teacher_R2"));
+                GameManager.ReanudarTiempo();
+
             });
         }
 

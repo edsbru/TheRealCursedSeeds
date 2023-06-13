@@ -45,8 +45,10 @@ public class PlayerHealthHandler : MonoBehaviour
     private Transform normalhpPosition;
     private Animator hpAnimator;
     private Animator noHpAnimator;
-    [SerializeField] public AudioClip deathSount;    
-    
+    [SerializeField] public AudioClip deathSount;
+
+
+    public bool godMode;
     
 
     void Start()
@@ -72,6 +74,16 @@ public class PlayerHealthHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            godMode = !godMode;
+        }
+
+        if (godMode)
+        {
+              playerStats.life = 3;
+        }
+
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;

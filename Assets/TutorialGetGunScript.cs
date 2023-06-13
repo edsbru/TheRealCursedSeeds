@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class TutorialGetGunScript : MonoBehaviour
 {
 
+   
     public static TutorialGetGunScript instance;
     GameObject gun;
     GameObject gunUI;

@@ -17,7 +17,7 @@ public class TeacherDialogue : MonoBehaviour
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
-    private bool didDialogueStart;
+    public bool didDialogueStart;
     private int lineIndex;
     private bool TpActivate;
 
@@ -61,6 +61,7 @@ public class TeacherDialogue : MonoBehaviour
 
     private void StartDialogue()
     {
+        GameManager.PararTiempo();
         didDialogueStart = true;
         DialoguePanel.SetActive(true);
         exclamation.SetActive(false);
@@ -73,7 +74,7 @@ public class TeacherDialogue : MonoBehaviour
 
     float lastDialogTime;
 
-    private void NextDialogueLine()
+    public void NextDialogueLine()
     {
         lineIndex++;
         if (lineIndex < DialogueLines.Length)
@@ -81,9 +82,11 @@ public class TeacherDialogue : MonoBehaviour
             GetComponent<AudioSource>().Play();
             GetComponent<AudioSource>().time = lastDialogTime;
             StartCoroutine(ShowLine());
+
         }
         else
         {
+            GameManager.ReanudarTiempo();
             try
             {
                 GetComponent<SwitchUIIndicator>().enabled = false;
@@ -96,9 +99,9 @@ public class TeacherDialogue : MonoBehaviour
             exclamation.SetActive(false);
             exclamation.GetComponent<SpriteRenderer>().enabled = false;
             movement.enabled = true;
+            finishDialogEvent.Invoke();
             t.enabled = false;
             coll.enabled = false;
-            finishDialogEvent.Invoke();
             
         }
     }

@@ -21,11 +21,26 @@ public class CofreArmas : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)) {
             if(playerIn)
             {
+                GameManager.meanuArmasAbierto = true;
                 GameManager.pendingToPillarArmaNueva = false;
                 menu.SetActive(true);
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && menu.activeSelf)
+        {
+            StartCoroutine(CloseMenuRoutine());
+            menu.SetActive(false);
+        }   
         
+    }
+
+    IEnumerator CloseMenuRoutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        GameManager.meanuArmasAbierto = false;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

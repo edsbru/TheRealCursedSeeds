@@ -25,6 +25,8 @@ public class PlayerSprites : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
 
         Vector3 rotation = mousePos - transform.position;
@@ -130,19 +132,23 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("isDead", false);
             }
 
-            if (playerStats.life <= 0)
-            {
-                animator.SetBool("Front", false);
-                animator.SetBool("Back", false);
-                animator.SetBool("Side", false);
-                animator.SetBool("MoveFront", false);
-                animator.SetBool("MoveSide", false);
-                animator.SetBool("MoveBack", false);
-                animator.SetTrigger("isDead");
+            // ----
+        }
 
-                Destroy(this);
-            }
+        if (playerStats.life <= 0)
+        {
+            animator.SetBool("Front", false);
+            animator.SetBool("Back", false);
+            animator.SetBool("Side", false);
+            animator.SetBool("MoveFront", false);
+            animator.SetBool("MoveSide", false);
+            animator.SetBool("MoveBack", false);
+            animator.SetTrigger("isDead");
+
+            Destroy(this);
         }
 
     }
+
+
 }

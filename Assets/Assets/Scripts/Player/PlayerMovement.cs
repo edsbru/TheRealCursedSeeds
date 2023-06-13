@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public AudioClip steepFootAudio;
     public static PlayerMovement instance;
     AudioSource slimefootstepas;
+
     void Start()
     {
         instance = this;

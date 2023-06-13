@@ -21,19 +21,30 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.semillasMenuOpened)
+        if (GameManager.semillasMenuOpened || GameManager.meanuArmasAbierto)
+        {
+            return;
+        }
+
+        bool floorMenuActive = FindObjectOfType<GoToDungeon>() && FindObjectOfType<GoToDungeon>().inPortal;
+
+        if(floorMenuActive)
         {
             return;
         }
         
         if (Input.GetKeyDown(KeyCode.Escape) && !isActive)
         {
+            
+
             Time.timeScale = 0.0f;
             pauseMenu.SetActive(true);
             isActive = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isActive)
         {
+            
+
             Time.timeScale = 1.0f;
             pauseMenu.SetActive(false);
             isActive = false;

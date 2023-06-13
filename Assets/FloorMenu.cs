@@ -41,6 +41,13 @@ public class FloorMenu : MonoBehaviour
             buttons[1].SetActive(false);
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ReturnToHub();
+            gameObject.SetActive(false);
+            //var player = FindObjectOfType<PlayerMovement>().gameObject;
+            //player.transform.position = player.transform.position + Vector3.up;
+        }
 
     }
 

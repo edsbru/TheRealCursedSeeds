@@ -9,5 +9,7 @@ public class HidoOnClick : MonoBehaviour
     public void Hide()
     {
         toHide.SetActive(false);
+        GameManager.meanuArmasAbierto = false;
+
     }
 }
