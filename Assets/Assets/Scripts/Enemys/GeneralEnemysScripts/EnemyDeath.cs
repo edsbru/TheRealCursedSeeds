@@ -98,21 +98,27 @@ public class EnemyDeath : MonoBehaviour
             {
                 if (SniterTargeting.instance.targeting)
                 {
-                    if(SniterTargeting.instance.closest = GetComponent<EnemiesStats>())
+                    if(SniterTargeting.instance.closest == GetComponent<EnemiesStats>())
                     {
                         if (SniterTargeting.instance.targetFixed)
                         {
                             damageMultiplier = 10f;
-
+                            FindObjectOfType<ShootScript>().currentAmmo = 0;
                         }
                         else
                         {
                             damageMultiplier = 2f;
+                            var shootScript = FindObjectOfType<ShootScript>();
+                            shootScript.currentAmmo -= 1;
+                            if (shootScript.currentAmmo <= 0)
+                            {
+                                shootScript.currentAmmo = 0;
+                            }
+
                         }
                     }
                 }
             }
-            Debug.Log(damageMultiplier);
             enemiesStats.enemyHealth -= bs.damage * damageMultiplier;
             if (enemiesStats.enemyHealth <= 0 )
             {

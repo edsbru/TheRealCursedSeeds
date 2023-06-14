@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerStats.slimed)
         {
-            transform.position += direction * playerStats.speed * Time.fixedDeltaTime*0.5f;
+            transform.position += direction * playerStats.speed * Time.fixedDeltaTime*0.6f;
 
         }
         else

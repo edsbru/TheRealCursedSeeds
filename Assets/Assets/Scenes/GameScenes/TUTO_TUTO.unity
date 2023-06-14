@@ -6548,15 +6548,14 @@ MonoBehaviour:
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
   DialogueLines:
-  - 'Don''t panic my child, I''ll Never gonna give you up
-
-'
-  - Never gonna let you down
-  - Sorry, I've been so alone that seeing another bug gets in my nerves
-  - Take that weapon and destroy that FILTHY wasp
+  - If you want to get out of here alive, get ready for the Pew! Pew!
+  - What? You don't have any guns? Well... I think I've one lying around.
+  - Grab my old pistol from the workbench and try to hit that bee.
+  - Don't panic, that tiny bug is frozen. Won't sting you! Ha, ha!
   mantee: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
   movement: {fileID: 1761008311}
   Teacher: {fileID: 541575289}
+  didDialogueStart: 0
 --- !u!212 &541575294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6902,6 +6901,30 @@ PrefabInstance:
     - target: {fileID: 466791274, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466791275, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466791275, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18758506
+      objectReference: {fileID: 0}
+    - target: {fileID: 466791275, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 665056355, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 665056355, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 665056355, guid: 35e8b7db31a3d2a4c9ec68560d067bcc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.023534894
       objectReference: {fileID: 0}
     - target: {fileID: 1887396868555821741, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
         type: 3}
@@ -7301,6 +7324,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805322590}
   m_CullTransparentMesh: 1
+--- !u!1 &831622285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831622286}
+  - component: {fileID: 831622287}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831622286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831622285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.068, y: -0.263, z: 0}
+  m_LocalScale: {x: 2.0076, y: 2.0076, z: 2.0076}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1830856675}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &831622287
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831622285}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 565724635
+  m_SortingLayer: 10
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 267736925, guid: 00d836164c0131049b8f4c335e4f84c3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &849160280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10107,7 +10214,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6435405, b: 0.504717, a: 1}
   m_Origin: {x: -4, y: 0, z: 0}
   m_Size: {x: 4, y: 11, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -10566,7 +10673,7 @@ MonoBehaviour:
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
   DialogueLines:
-  - AMAZING, you get the potato thingi!
+  - Click to shoot. Press 'R' to reload. You have infinte ammo!
   weapon: {fileID: 1444282672}
 --- !u!114 &1001408744
 MonoBehaviour:
@@ -14444,14 +14551,13 @@ MonoBehaviour:
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
   DialogueLines:
-  - 'Welcome traveller, I''m sure you fell from that huge hole in the ceiling.
-
-'
-  - Let me show you how are the things under the surface. Just...
-  - Let me fire up this stone so we can begin your journey.
+  - "Welcome traveller, I'm sure you feel bewildered in a place like this. \r\n"
+  - Let me show you how to protect yourself. Just...
+  - Let's fire up this stone so we can begin your journey.
   mantee: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
   movement: {fileID: 1761008311}
   Teacher: {fileID: 1377725062}
+  didDialogueStart: 0
 --- !u!212 &1377725066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17650,10 +17756,12 @@ MonoBehaviour:
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
   DialogueLines:
-  - You did it?!
+  - Oh! Could that gun actually shoot? I was using it as a hammer...
+  - That's all i can teach you. Take that portal to venture into the dungeon
   mantee: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
   movement: {fileID: 1761008311}
   Teacher: {fileID: 1793325433}
+  didDialogueStart: 0
 --- !u!212 &1793325438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18087,6 +18195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2334146018713380575, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
+      propertyPath: m_Color.a
+      value: 0.5372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334146018713380575, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
       propertyPath: m_SortingLayer
       value: 10
       objectReference: {fileID: 0}
@@ -18119,6 +18232,12 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 2334146017784503393, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
+--- !u!4 &1830856675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2334146018713380572, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1830856674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1853926634
 PrefabInstance:
   m_ObjectHideFlags: 0

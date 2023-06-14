@@ -18,6 +18,7 @@ public class Dialogue : MonoBehaviour
     public bool obliterate;
     private void Start()
     {
+        Debug.Log(gameObject.name);
         mantee = GameObject.Find("mantee_v2");
         movement = mantee.GetComponent<PlayerMovement>();
     }

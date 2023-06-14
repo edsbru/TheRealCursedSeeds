@@ -1046,7 +1046,7 @@ MonoBehaviour:
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
-  currentFloor: 0
+  currentFloor: 2
   floor1Passed: 0
   floor2Passed: 0
   floor3Passed: 0

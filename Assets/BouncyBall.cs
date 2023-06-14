@@ -43,6 +43,7 @@ public class BouncyBall : MonoBehaviour
         {
             return;
         }
+        GetComponent<BulletStats>().damage *= 0.5f;
         if(bounceCount++ >= 3 || collision.collider.CompareTag("enemy"))
         {
             Destroy(gameObject);

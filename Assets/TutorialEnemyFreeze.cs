@@ -11,7 +11,6 @@ public class TutorialEnemyFreeze : MonoBehaviour
     void Start()
     {
 
-        Debug.Log(gameObject.name);
         
     }
 

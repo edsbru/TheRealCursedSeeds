@@ -38,7 +38,7 @@ public class SlimeManager : MonoBehaviour
             bool spawn = Random.Range(0, 100) < 30;
             if(spawn && !ListIntersection(spawned, slime.incompatibles))
             {
-                spawned.Add(index);
+                spawned.Add(slime.id);
                 slime.gameObject.SetActive(true);
             }
         }

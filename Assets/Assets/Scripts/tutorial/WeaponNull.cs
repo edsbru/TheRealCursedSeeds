@@ -44,6 +44,12 @@ public class WeaponNull : MonoBehaviour
         StartCoroutine(ShowLine());
     }
 
+    private void Start()
+    {
+        Debug.Log(gameObject.name);
+
+    }
+
     private void NextDialogueLine()
     {
         lineIndex++;

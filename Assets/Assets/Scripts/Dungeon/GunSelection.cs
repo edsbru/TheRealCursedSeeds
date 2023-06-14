@@ -20,6 +20,7 @@ public class GunSelection : MonoBehaviour
 
     public void SelectWeapon(int weaponIndex)
     {
+        rotatePoint = GameObject.Find("RotatePoint");
         GameManager.instance.currentWeaponID = weaponIndex;
         for (int i = 0; i < rotatePoint.transform.childCount; i++)
         {

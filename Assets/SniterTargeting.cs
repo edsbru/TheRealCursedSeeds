@@ -75,7 +75,7 @@ public class SniterTargeting : MonoBehaviour
         UpdateClosest();
 
 
-        if(distanceToClosest < 1.5f)
+        if(distanceToClosest < 1.45f && FindObjectOfType<ShootScript>().currentAmmo != 0)
         {
             if (!targeting)
             {

@@ -91,6 +91,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 946568008614977442, guid: 7eba5506082a44f43a0f9f117552752e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1892625688304372300, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: m_FlipX
@@ -197,6 +202,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 629b280fc863bfc4d987cb5623f26928, type: 2}
+    - target: {fileID: 2388815026026664927, guid: 7eba5506082a44f43a0f9f117552752e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7375465509945596954, guid: 7eba5506082a44f43a0f9f117552752e,
         type: 3}
       propertyPath: enemySpeed
@@ -229,6 +239,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eba5506082a44f43a0f9f117552752e, type: 3}
+--- !u!1 &4615338779591009643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1892625688304372402, guid: 7eba5506082a44f43a0f9f117552752e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6507436631982747609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3572810182040650515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615338779591009643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4854219fee1e47498b53da88e3ee6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4615338779591009684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1892625688304372301, guid: 7eba5506082a44f43a0f9f117552752e,
