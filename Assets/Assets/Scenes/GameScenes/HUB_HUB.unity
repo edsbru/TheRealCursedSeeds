@@ -3892,7 +3892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: deb275da4a3558243967cb9c9746edcc, type: 3}
+  m_Sprite: {fileID: 1505299784, guid: 8ea21bda8b11cd941b3f4208ecb7eea0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4369,7 +4369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: deb275da4a3558243967cb9c9746edcc, type: 3}
+  m_Sprite: {fileID: -332067779, guid: d05549450bc765547bbbf839cab6d4f8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7072,7 +7072,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -742114219
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &844627232
 RectTransform:
@@ -10128,14 +10128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d2308e03f43884a935c85ceb579d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 010000000000000000000000000000000000000000000000000000000000000000000000
+  inventory: 000000000000000000000000000000000000000000000000000000000000000000000000
   money: 0
   isPlanted: 0
   isGrowed: 0
   pile: {fileID: 1873615610}
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
+  - {fileID: 717133719154522201, guid: 9062e7d6b1d84bf418ed9294d009ab8b, type: 3}
+  - {fileID: 717133719154522201, guid: b71959b7e5fc3c6448fe6b2bf2ad0b08, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
+  - {fileID: 717133719154522201, guid: 21c576dbe6f5f0a4c8af92ec778e178e, type: 3}
   currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
@@ -14032,7 +14035,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: deb275da4a3558243967cb9c9746edcc, type: 3}
+  m_Sprite: {fileID: 180448828, guid: 8ea21bda8b11cd941b3f4208ecb7eea0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

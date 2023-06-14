@@ -140,19 +140,15 @@ public class GameManager : MonoBehaviour
 
     public void GrowingPlant(int seed_number)
     {
-        if (seed_number == 0 && !isPlanted )
+
+        if(!isPlanted)
         {
-            spawnWeapon = weaponsToSpawn[0];
+            spawnWeapon = weaponsToSpawn[seed_number];
             isPlanted = true;
             PlantTimer = 5f;
         }
 
-        if (seed_number == 1 && !isPlanted )
-        {
-            spawnWeapon = weaponsToSpawn[1];
-            isPlanted = true;
-            PlantTimer = 5f;
-        }
+
     }
 
     public void SaveGame()

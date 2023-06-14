@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6541be6695945b843b53e5cd86976e81, type: 3}
-  m_Name: RabbitSeed
+  m_Name: ShotGunSeed 1
   m_EditorClassIdentifier: 
-  seedSprite: {fileID: -332067779, guid: d05549450bc765547bbbf839cab6d4f8, type: 3}
-  seedName: Rabbit
-  id_Wseed: 4
+  seedSprite: {fileID: 21300000, guid: c0040017f61632d4eb949d25f1fe3dc7, type: 3}
+  seedName: ShotGun
+  id_Wseed: 1
   dropChance: 100

@@ -34,7 +34,9 @@ public class LootBag : MonoBehaviour
 
         if (possibleSeeds.Count > 0)
         {
-            Wseed dropedSeed = possibleSeeds[Random.Range(0, possibleSeeds.Count)];
+            var seedIndex = Random.Range(0, possibleSeeds.Count);
+
+            Wseed dropedSeed = possibleSeeds[seedIndex];
             return dropedSeed;
         }
         Debug.Log("No loot droped");
@@ -44,9 +46,11 @@ public class LootBag : MonoBehaviour
     public void InstatianteWseed(Vector3 spawnPosition)
     {
         Wseed dropedSeed = GetDroppedSeed();
+        
         if (dropedSeed != null)
         {
             GameObject WseedGameObject = Instantiate(dropedSeedPrefab, spawnPosition, Quaternion.identity);
+           
             WseedGameObject.GetComponent<SpriteRenderer>().sprite = dropedSeed.seedSprite;
             WseedGameObject.GetComponent<Reference>().ws = dropedSeed;
             float dropForce = 2f;
@@ -62,6 +66,13 @@ public class LootBag : MonoBehaviour
             WseedGameObject.GetComponent<CircleCollider2D>().radius *= 3.5f;
             WseedGameObject.AddComponent<DeleteDropeableByTyme>();
             bubble.AddComponent<DeleteDropeableByTyme>();
+
+            if (dropedSeed.id_Wseed > 2)
+            {
+                WseedGameObject.transform.localScale = Vector3.one * 0.17f;
+                WseedGameObject.transform.GetChild(0).localScale = Vector3.one * 25f;
+            }
+
 
         }
     }

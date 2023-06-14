@@ -262,7 +262,6 @@ MonoBehaviour:
   deathSplash: {fileID: 8184030085964881118, guid: 1f370870170d30c4188dc5b02890d5dc,
     type: 3}
   hitAudioSource: {fileID: 7704014976549941691}
-  organicHitAudioSource: {fileID: 2973513970998297780}
   hitSounds:
   - {fileID: 8300000, guid: 86c685008d8162b47ae888845ebed8f5, type: 3}
   - {fileID: 8300000, guid: b0a7a5ae8b410dd4284b316ce4943482, type: 3}
@@ -272,6 +271,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 38d46fb35cbc0c0418222b52b283b2e3, type: 3}
   - {fileID: 8300000, guid: 9521df7eb85228c4bb9d9a0e4b4c9ddf, type: 3}
   organicDeathSound: {fileID: 8300000, guid: e2559158400fc2243bd9f7b6b9423b9d, type: 3}
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2334146017784503453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaeeb8645409ac48851cb4033235f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fixillo: {fileID: 0}
   isFrozen: 0
   setToFreeze: 0
   isHit: 0
@@ -304,7 +307,10 @@ MonoBehaviour:
     type: 3}
   WseedsList:
   - {fileID: 11400000, guid: 639cc9d355f8cf74497f377f20b8b851, type: 2}
-  - {fileID: 11400000, guid: 515c0593659d94b42a9134e032ec2817, type: 2}
+  - {fileID: 11400000, guid: f87e59039be42914db155cccbee78734, type: 2}
+  - {fileID: 11400000, guid: 23390b9c1fd316344b472c3e3a33e61c, type: 2}
+  - {fileID: 11400000, guid: 2987fb2f95c5ffe42b80a0e690ab27c3, type: 2}
+  - {fileID: 11400000, guid: 53dbc06a73742fb4487966c482361586, type: 2}
 --- !u!114 &5766464301680568062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 7db6d48da37053044ad381db1bd3ca7a, type: 2}
+  secondSR: {fileID: 0}
 --- !u!114 &2334146017784503393
 MonoBehaviour:
   m_ObjectHideFlags: 0
